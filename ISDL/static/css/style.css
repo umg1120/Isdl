@@ -1,0 +1,470 @@
+:root {
+  --primary-color: #0c3197;
+  --bg-color: #4582dd;
+  --light-bg-color: #8AB6F9;
+  --text-color: #010704;
+  --light-text-color: #19191b;
+  --primary-text-color: #dde2e5;
+
+  /* New color scheme for dynamic background */
+  --bg-gradient-start: #00246B;
+  --bg-gradient-end: #abaae0;
+  --dropdown-bg: #c4d3f0;
+  --text-box-bg: #CADCFC;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 30px;
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color);
+}
+
+/* Dynamic Background */
+body {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url("bg_image.jpg");   
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  background-position: center; /* Center the image */
+  animation: backgroundAnimation 15s ease infinite;
+  opacity: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Keep this if you want items at the top */
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-weight: 500;
+  margin-top: 30px; /* Add margin to create space above all content */
+}
+
+/* Keyframes for continuous background animation */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P',"Roboto","Gill Sans", "Gill Sans MT", Calibri,"Trebuchet MS", sans-serif;
+  font-weight: 400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+ .container {
+  margin-top: 50px;
+}
+
+.main-heading {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive; /* Pixelated font */
+    font-size: 3rem; /* Adjust size as needed */
+    font-weight: bold;
+    /* margin: 10000px 0 500px; /* Adds space above and below the heading */
+    margin-top: 100px; /* Increased top margin */
+    margin-bottom: 100px; /* Keep bottom margin at 20px */
+    color: #e7e5e4; /* Change this to your desired color */
+}
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: flex-start; /* Align content to the top */
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-weight: 500;
+}
+
+body.dark {
+  --bg-gradient-start: #2c3e50;
+  --bg-gradient-end: #4ca1af;
+  --dropdown-bg: #3b4a5b;
+  --text-box-bg: #4e6173;
+  --bg-color: #878683;
+  --light-bg-color: #444444;
+  --text-color: #fff;
+  --light-text-color: #58575c;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+ .container {
+  margin-top: 50px;
+}
+
+.main-heading {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive; /* Pixelated font */
+    font-size: 3rem; /* Adjust size as needed */
+    font-weight: bold;
+    /* margin: 10000px 0 500px; /* Adds space above and below the heading */
+    margin-top: 100px; /* Increased top margin */
+    margin-bottom: 100px; /* Keep bottom margin at 20px */
+    color: #e7e5e4; /* Change this to your desired color */
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  gap: px;
+  margin-top: 50px; /* Optional: Add some space below the heading */
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.container .card {
+  flex: 1;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: var(--light-bg-color);
+  border: 4px solid #ffffff; /* White and bold border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),  /* Shadow for depth */
+              0 2px 5px rgba(255, 255, 255, 0.7); /* Light top shadow for highlight */
+}
+
+.container .card .from,
+.container .card .to {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.container .card .from {
+  margin-right: 20px;
+}
+
+.container .card .to {
+  margin-left: 20px;
+}
+
+.container .card .heading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--light-text-color);
+  white-space: nowrap;
+}
+
+.dropdown-container {
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.dropdown-container .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 30px;
+  background-color: var(--dropdown-bg); /* Updated to match background */
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dropdown-container .dropdown-toggle span {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.dropdown-container .dropdown-toggle ion-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-container.active .dropdown-toggle {
+  border-radius: 20px 20px 0 0;
+}
+
+.dropdown-container.active .dropdown-toggle ion-icon:last-child {
+  transform: rotate(180deg);
+}
+
+.dropdown-container .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+  display: none;
+  padding: 20px;
+  z-index: 1;
+  list-style: none;
+  flex-direction: column;
+  background-color: var(--dropdown-bg); /* Updated to blend with theme */
+  transition: all 1s;
+  border-radius: 0 0 20px 20px;
+}
+
+.dropdown-container .dropdown-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.dropdown-container.active .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-container .dropdown-menu li {
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--light-bg-color);
+  transition: all 0.3s ease;
+}
+
+.dropdown-container .dropdown-menu li:hover {
+  background-color: var(--light-bg-color);
+}
+
+.dropdown-container .dropdown-menu li.active {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+.container .text-area {
+  position: relative;
+}
+
+.container textarea {
+  width: 100%px;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: var(--text-box-bg); /* Updated to complement the background */
+  resize: none; 
+  outline: none;
+  border: 3px solid rgb(9, 9, 9); /* Bold white border */
+  border-radius: 15px; /* Rounded edges */
+  color: var(--text-color);
+  font-size: 18px;
+  height: 320px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Shadow effect */
+}
+
+.container .text-area .chars {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 0.8rem;
+  color: var(--light-text-color);
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  border-top: 2px solid var(--bg-color);
+}
+
+.card-bottom p {
+  margin-bottom: 20px;
+}
+
+.card-bottom label {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  cursor: pointer;
+  border-radius: 32px;
+  background-color: var(--bg-color);
+}
+
+.card-bottom label:hover {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+.card-bottom span {
+  font-size: 15px;
+  pointer-events: none;
+}
+
+.card-bottom ion-icon {
+  font-size: 22px;
+}
+
+.card-bottom button {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  cursor: pointer;
+  background-color: var(--bg-color);
+}
+
+.card-bottom button:hover {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+.container .center {
+  position: relative;
+}
+
+.swap-position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 5px solid var(--bg-color);
+  transition: all 0.3s;
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+.swap-position ion-icon {
+  font-size: 25px;
+}
+
+.swap-position:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+.mode {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.toggle {
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-track {
+  width: 30px;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3px 0;
+  justify-content: space-between;
+  border: 1px solid var(--light-text-color);
+  background-color: var(--light-bg-color);
+  transition: all 0.3s ease;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 25px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+.toggle input:checked ~ .toggle-thumb {
+  transform: translateY(25px);
+}
+
+.toggle img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Media Querries */
+
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .container .card {
+    width: 100%;
+  }
+
+  .container.card .from {
+    margin-right: 0;
+  }
+
+  .container.card .to {
+    margin-left: 0;
+  }
+
+  .container .card .from,
+  .container .card .to {
+    flex-direction: column;
+  }
+
+  .swap-position {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .swap-position:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .swap-position ion-icon {
+    transform: rotate(90deg);
+  }
+}
